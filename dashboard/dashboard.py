@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from func import DataAnalyzer
-import format_currency
+
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
