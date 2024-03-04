@@ -3,7 +3,6 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 import streamlit as st
 from func import DataAnalyzer
-from babel.numbers import format_currency
 
 sns.set(style='dark')
 st.set_option('deprecation.showPyplotGlobalUse', False)
@@ -48,8 +47,6 @@ main_df = all_df[(all_df["order_approved_at"] >= str(start_date)) &
 
 function = DataAnalyzer(main_df)
 
-daily_orders_df = function.create_daily_orders_df()
-sum_spend_df = function.create_sum_spend_df()
 sum_order_items_df = function.create_sum_order_items_df()
 monthly_transactions_df = function.create_monthly_transactions_df()
 monthly_sells_df = function.create_monthly_sells_df()
@@ -61,55 +58,6 @@ review_score, common_score = function.review_score_df()
 
 # Title
 st.header("✨Welcome to QLIT E-Commerce Dashboard✨")
-
-# Daily Orders
-st.subheader("Daily Orders :convenience_store:")
-
-col1, col2 = st.columns(2)
-
-with col1:
-    total_order = daily_orders_df["order_count"].sum()
-    st.markdown(f"Total Order: **{total_order}**")
-
-with col2:
-    total_revenue = format_currency(daily_orders_df["revenue"].sum(), "IDR", locale="id_ID")
-    st.markdown(f"Total Revenue: **{total_revenue}**")
-
-fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(
-    daily_orders_df["order_approved_at"],
-    daily_orders_df["order_count"],
-    marker="o",
-    linewidth=2,
-    color="#CD5C5C"
-)
-ax.tick_params(axis="x", rotation=45)
-ax.tick_params(axis="y", labelsize=15)
-st.pyplot(fig)
-
-# Customer Spend Money
-st.subheader("Customer Spend Money")
-col1, col2 = st.columns(2)
-
-with col1:
-    total_spend = format_currency(sum_spend_df["total_spend"].sum(), "IDR", locale="id_ID")
-    st.markdown(f"Total Spend: **{total_spend}**")
-
-with col2:
-    avg_spend = format_currency(sum_spend_df["total_spend"].mean(), "IDR", locale="id_ID")
-    st.markdown(f"Average Spend: **{avg_spend}**")
-
-fig, ax = plt.subplots(figsize=(12, 6))
-ax.plot(
-    sum_spend_df["order_approved_at"],
-    sum_spend_df["total_spend"],
-    marker="o",
-    linewidth=2,
-    color="#CD5C5C"
-)
-ax.tick_params(axis="x", rotation=45)
-ax.tick_params(axis="y", labelsize=15)
-st.pyplot(fig)
 
 # Order Items
 st.subheader("Order Items")
