@@ -13,4 +13,4 @@ or you can also use
 py -m streamlit run dashboard.py
 
 ## Screenshoot
-![alt text](1.a.jpg)
+![alt text](screenshoot.jpg)
