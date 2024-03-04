@@ -9,7 +9,7 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Dataset
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
-all_df = pd.read_csvall_df = pd.read_csv("D:/Bangkit Academy - ML/Proyek Akhir Analisis Data E-Commerce Dicoding Shafira/dashboard/all_data.csv")
+all_df = pd.read_csvall_df = pd.read_csv("/dashboard/all_data.csv")
 all_df.sort_values(by="order_approved_at", inplace=True)
 all_df.reset_index(inplace=True)
 
@@ -25,6 +25,9 @@ with st.sidebar:
     # Title
     st.title("QLIT")
     st.write("Make It Easier")
+
+    #Image
+    st.image("/dashboard/qlit.png)
 
     # Date Range
     start_date, end_date = st.date_input(
