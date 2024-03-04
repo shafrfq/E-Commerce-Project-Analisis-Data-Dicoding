@@ -4,7 +4,9 @@ This repository contains the final project for the Data Analytics course on Dico
 
 ## Setup Environment
 conda activate --name main-ds python=3.12.0
+
 conda activate main-ds
+
 pip install pandas matplotlib seaborn jupyter streamlit
 
 ## Run Streamlit App
