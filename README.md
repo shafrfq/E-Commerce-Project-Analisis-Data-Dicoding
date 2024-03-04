@@ -10,9 +10,13 @@ conda activate main-ds
 pip install pandas matplotlib seaborn jupyter streamlit
 
 ## Run Streamlit App
-streamlit run dashboard.py or you can also use
+streamlit run dashboard.py 
+
+or you can also use
 
 py -m streamlit run dashboard.py
 
 ## Screenshoot
+This is a simple streamlit dashboard view
+
 ![alt text](launching.jpg)
