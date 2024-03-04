@@ -27,7 +27,7 @@ with st.sidebar:
     st.write("Make It Easier")
 
     #Image
-    st.image("/dashboard/qlit.png)
+    st.image("/dashboard/qlit.png")
 
     # Date Range
     start_date, end_date = st.date_input(
