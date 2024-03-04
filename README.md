@@ -5,17 +5,29 @@ This repository contains the final project for the Data Analytics course on Dico
 # File Structure
 .
 ├── dashboard
+
 ├── __pychache__
+
 │   ├── all_data.csv
+
 │   ├── dashboard.py
+
 │   ├── func.py
+
 │   └── qlit.png
+
 ├── dataset_e-commerce
+
 │   ├── New Text Document.txt
+
 │   ├── customers_dataset.csv
+
 │   ├── geolocation_dataset.csv
+
 │   ├── order_items_dataset.csv
+
 │   ├── order_payments_dataset.csv
+
 │   ├── order_reviews_dataset.csv
 │   ├── orders_dataset.csv
 │   ├── product_category_name_translation.csv
