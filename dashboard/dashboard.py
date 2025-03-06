@@ -4,9 +4,6 @@ import seaborn as sns
 import streamlit as st
 from func import DataAnalyzer
 
-sns.set(style='dark')
-st.set_option('deprecation.showPyplotGlobalUse', False)
-
 # Dataset
 datetime_cols = ["order_approved_at", "order_delivered_carrier_date", "order_delivered_customer_date", "order_estimated_delivery_date", "order_purchase_timestamp", "shipping_limit_date"]
 all_df = pd.read_csv("dashboard/all_data.csv")
